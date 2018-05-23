@@ -6,14 +6,16 @@ html, body {
   position: absolute;
   padding: 0;
   margin: 0;
-  background: #ffffff;
+  background: #f2f2f2;
 }
 
 /* Tamanho do mapa */
 #mapa {
-  height: 80%;
-  width: 40%;
+  height: 640;
+  width: 620;
   top: 150px;
+  display: block;
+  left: 280px;
 }
 
 /* Barra Superior */
@@ -23,6 +25,20 @@ header {
   width: 100%;
   height: auto;
   z-index: 10;
+  transition: top 0.3s;
+}
+
+header a {
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Efeito de quando passa o mouse sobre o menu*/
+header a:hover {
+  background-color: #fff;
+  color: #66cdaa;
 }
 
 header ul {
@@ -40,20 +56,52 @@ header li {
   width: 200px;
 }
 
+/* Caixa do conteudo */
+.grid {
+  border: 0.5px #cccccc solid;
+  width: 1200px;
+  height: 100%;
+  display: grid;
+  position: fixed;
+  left: 198;
+  background: #ffffff
+
+}
+
 /* Posicao dos títulos das páginas */
-.publicacao, .sobre, .mapa {
+.publicacao, .sobre, .mapa-text {
   position: absolute;
   top: 80px;
 }
 
 .publicacao li {
-  font-family: 'Raleway', sans-serif;
-  font-size: 12px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
   font-weight: 500;
   line-height: 20px;
 }
 
+.publicacao a{
+  color: #66CDAA;
+}
+
+.sobre a{
+  color: #66CDAA;
+}
+
+/* Tipografia */
 h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
 }
