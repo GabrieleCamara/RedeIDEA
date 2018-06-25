@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rede IDEA - Crie uma IDEA</title>
+    <!-- Link para arquivos base -->
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">Sobre a Rede</a></li>
+        <li><a href="map.html">Mapa IDEAs</a></li>
+        <li><a href="public.html">Publicações</a></li>
+        <li><a href="crie.html">Crie uma IDEA</a></li>
+        <!-- <li>Troque IDEA</li>
+        <li>Compartilhe sua IDEA</li> -->
+        <li><a href="inter.html">Internacional</a></li>
+      </ul>
+    </header>
+    <div class="grid-crie">
+      <div class="crie">
+        <h3>Crie uma IDEA</h3>
+        <p>A Universidade Federal do Paraná (UFPR) desenvolve sua IDEA por meio da plataforma <a href="http://geonode.org/" target="_blank">GEONODE</a>. Abaixo estão alguns tutoriais de relacionados ao Geonode que foram implementados no IDEA UFPR:</p>
+        <button class="collapsible">Tradução do site</button>
+          <div class="content">
+            <p><b>1 -</b> Baixar poedit no computador. <br /><b>2 - </b> Entrar no diretório de pastas com os arquivos de tradução [cd /usr/local/lib/python2.7/dist-packages/geonode/locale/pt/LC_MESSAGES]<br /><b>3 - </b>Modificar os arquivos no formato po (são dois) [sudo poedit django.po].<br /><b>4 - </b>Reiniciar os servidores<br /><b>Links relacionados: </b><a href="https://geonode.readthedocs.io/en/1.2/developers/translation.html" target="_blank">Geonode.</a> <a href="https://docs.djangoproject.com/en/dev/topics/i18n/translation/#localization-how-to-create-language-files" target="_blank">Django.</a></p>
+          </div>
+          <button class="collapsible">Customizando a interface do Geonode - Logo</button>
+            <div class="content">
+              <p><b>1 - </b>Colocado a imagem na pasta correta do Geonode.<br /><b>1.1 - </b> Diretório onde se encontram as imagens [cd /var/www/geonode/static/geonode/img/]. <br /><b>1.2 - </b>Entrar no diretório onde a imagem foi salva [cd /home/labgeolivre/Imagens/]<br /><b>1.3 - </b> Copiar a imgem para o diretório das imagens do geonode [sudo cp ogllogo.png /var/www/geonode/static/geonode/img/].<br /><b>1.4 - </b> Entrar o diretório das imagens do geonode e verificar se foi feita a cópia corretamente [cd /var/www/geonode/static/geonode/img/<br />ls -l].<br /><b>1.5 - </b>A permissão da imagem está diferente das outras imagens (-rw-r—r--), para dar permissão total ao arquivo: [cd /var/www/geonode/static/geonode/img/<br />sudo chmod 777 ogllogo.png]<br /><b>2 - </b> Alterando a imagem no geonode.<br /><b>2.1 - </b> Diretório para alterar o arquivo css [cd /var/www/geonode/static/geonode/css/].<br /><b>2.2 - </b> Fazendo backup do arquivo base.css [sudo cp base.css base.css.backup].<br /><b>2.3 - </b> Abrindo arquivo para a edição [sudo gedit base.css].<br /><b>2.4 - </b> Arquivo alterado.<br />De .navbar-brand{background:url(../img/logo.png)<br />Para .navbar-brand{background:url(../img/ogllogo.png).<br /><b>2.5 - </b> Para o apache, o tomcat e dar collectstatic<br />[sudo service apache2 stop]<br />[sudo service tomcat7 stop]<br />[sudo geonode collectstatic].<br /><b>2.6 - </b> Reiniciar os servidores.<br />[sudo service apache2 start]<br />[sudo service tomcat7 start]</p>
+            </div>
+            <button class="collapsible">Customizando os templates do Geonode</button>
+              <div class="content">
+                <p><p><b>1 - </b>Colocado a imagem na pasta correta do Geonode.<br /><b>1.1 - </b>Diretório onde se encontram as imagens [cd /var/www/geonode/static/geonode/img/]. <br /><b>1.2 - </b>Entrar no diretório onde a imagem foi salva [cd /home/labgeolivre/Imagens/]. <br /><b>1.3 - </b> Copiar a imgem para o diretório das imagens do geonode [sudo cp infra.png /var/www/geonode/static/geonode/img/]. <br /><b>1.4 - </b> Entrar o diretório das imagens do geonode e verificar se foi feita a cópia corretamente [cd /var/www/geonode/static/geonode/img/<br /> ls -l]. <br /><b>1.5 - </b> A permissão da imagem está diferente das outras imagens (-rw-r—r--), para dar permissão total ao arquivo [cd /var/www/geonode/static/geonode/img/<br /> sudo chmod 777 infra.jpg].<br /><b>2 - </b> Alterando a imagem no geonode.<br /><b>2.1 - </b> diretório para alterar o arquivo css [cd /var/www/geonode/static/geonode/css/]. <br /><b>2.1 - </b> fazendo backup do arquivo base.css [sudo cp base.css base.css.backup].<br /><b>2.2 - </b>Abrindo arquivo para a edição [sudo gedit base.css]. <br /><b>2.3 - </b> Arquivo alterado --- linha 11<br />De jumbotron{background:#028baf;color:#fff;padding:40px 0 60px<br />Para jumbotron{background:url(../img/infra.jpg);color:#fff;padding:40px 0 60px.<br /><b>2.3 - </b> para o apache, o tomcat e dar collectstatic<br />[sudo service apache2 stop]<br />[sudo service tomcat7 stop]<br />[sudo geonode collectstatic ]<br />[sudo service apache2 start]<br />[sudo service tomcat7 start].<br /><b>2.4 - </b> Reiniciar os servidores.<br />[sudo service apache2 start]<br />[sudo service tomcat7 start].</p>
+              </div>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="icons">
+        <li><a href="http://www.ufpr.br/portalufpr/" target="_blank"><img src="images/ufpr.gif" width="70px" height="50px" alt=""/></a></li>
+        <li><a href="http://www.labgeolivre.ufpr.br/" target="_blank"><img src="images/geoforall.png" width="50px" height="50px" alt=""/></a></li>
+        <li><a href="https://icaci.org/" target="_blank"><img src="images/ica_logo.png" width="50px" height="50px" alt=""/></a></li>
+        <li>&copy; UFPR. All rights reserved.</li>
+      </ul>
+    </div>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+  </body>
+</html>

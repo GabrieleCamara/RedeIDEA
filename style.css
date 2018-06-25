@@ -2,8 +2,9 @@
 html, body {
   height: 100%;
   width: 100%;
+  min-height: 100%;
   margin: 0px;
-  position: absolute;
+  position: relative;
   padding: 0;
   margin: 0;
   background: #f2f2f2;
@@ -11,11 +12,10 @@ html, body {
 
 /* Tamanho do mapa */
 #mapa {
-  height: 640;
-  width: 620;
-  top: 150px;
+  height: 800;
+  width: 105%;
   display: block;
-  left: 280px;
+  z-index: 9;
 }
 
 /* Barra Superior */
@@ -25,20 +25,20 @@ header {
   width: 100%;
   height: auto;
   z-index: 10;
-  transition: top 0.3s;
-}
-
-header a {
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
 }
 
 /* Efeito de quando passa o mouse sobre o menu*/
+header a {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
 header a:hover {
   background-color: #fff;
   color: #66cdaa;
+  opacity: 0.8;
 }
 
 header ul {
@@ -57,51 +57,201 @@ header li {
 }
 
 /* Caixa do conteudo */
-.grid {
-  border: 0.5px #cccccc solid;
-  width: 1200px;
-  height: 100%;
+.grid-index {
+  width: 1000px;
+  height: 230%;
   display: grid;
-  position: fixed;
-  left: 198;
-  background: #ffffff
-
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  background: #ffffff;
+  -webkit-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
 }
 
+.grid-mapa {
+  width: 1000px;
+  height: 300%;
+  display: grid;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  background: #ffffff;
+  -webkit-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+}
+
+.grid-public {
+  width: 1000px;
+  height: 150%;
+  display: grid;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  background: #ffffff;
+  -webkit-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+}
+
+.grid-crie {
+  width: 1000px;
+  height: 240%;
+  display: grid;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  background: #ffffff;
+  -webkit-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+}
+
+.grid-inter {
+  width: 1000px;
+  height: 230%;
+  display: grid;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  background: #ffffff;
+  -webkit-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 20px -6px rgba(0,0,0,0.75);
+}
 /* Posicao dos títulos das páginas */
-.publicacao, .sobre, .mapa-text {
+.publicacao, .sobre, .mapa-text, .crie, .inter {
   position: absolute;
   top: 80px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 0px;
 }
 
-.publicacao li {
+/* Tipografia das listas */
+.publicacao li, .sobre p,  .sobre li, .crie p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 2px;
+}
+
+.inter p {
   font-family: 'Work Sans', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
 }
 
-.publicacao a{
+/* Tipografia dos links */
+.publicacao a, .sobre a, .mapa-text a, .crie a, .inter a {
   color: #66CDAA;
+  font-weight: bold;
 }
 
-.sobre a{
-  color: #66CDAA;
-}
-
-/* Tipografia */
+/* Tipografia dos títulos */
 h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
 }
 
 h4 {
   font-family: 'Oswald', sans-serif;
   font-size: 15px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
+}
+
+/* Linha abaixo dos títilos das páginas */
+h3:after {
+  content:' ';
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  width: 500px;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+  transform: translateX(-50%);
+}
+
+.mapa-form {
+  top: 150px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Rodapé */
+
+.footer {
+  background-color: #d9d9d9;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  /* z-index: 9; */
+}
+
+.footer ul {
+  margin: 15px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer li {
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  display: inline-block;
+  width: 200px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #d9d9d9;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* Formatando posição das imagens  */
+.inter img {
+  display: inline;
 }
