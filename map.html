@@ -12,7 +12,6 @@
     <!-- Link para a biblioteca do minimap -->
     <link type="text/css" rel="stylesheet" href="plugins/minimap/src/Control.MiniMap.css"/>
     <script src="plugins/minimap/src/Control.MiniMap.js"></script>
-
     <!-- Link para arquivos base -->
     <link type="text/css" rel="stylesheet" href="style.css"/>
     <script src="map.js"></script>
@@ -41,7 +40,46 @@
         <br /><div id="mapa"></div>
         <div class="mapa-form">
           <p>Se sua universidade ou instituição deseja fazer parte da Rede, cadastre-se no formulário abaixo e entre para o mapa das IDEAs.<br /></p>
-          <iframe width='700' height='800' align="middle" src="https://docs.google.com/forms/d/e/1FAIpQLSdQ64620pbG2d1CiVNnbNsoYJ26swdHvU8SOCROEsTsiUArUg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          <form action="dados-formulario-ide.php" method="post">
+            <div>
+              <label for="nome-univ">Nome da Instituição:</label>
+              <input type="text" id="nome-univ" name="usuario_univer" />
+            </div>
+            <div>
+              <label for="link-ide">Link da IDEA ou Portal:</label>
+              <input type="text" id="link-ide" name="usuario_idea" />
+            </div>
+            <div>
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="usuario_nome" />
+            </div>
+            <div>
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="usuario_email" />
+            </div>
+            <!-- <div>
+              <label for="prof">Ocupação:</label>
+              <input type="checkbox" name="opcao1" value="professor"> Professor (a)<br>
+              <input type="checkbox" name="opcao2" value="pesquisador"> Pesquisador (a)<br>
+              <input type="checkbox" name="opcao3" value="aluno-pos"> Estudante de Pós-Graduação<br>
+              <input type="checkbox" name="opcao4" value="aluno-grad"> Estudante de Graduação<br>
+            </div>
+            <div>
+              <label for="deseja">O que você deseja:</label>
+              <input type="checkbox" name="opcao1" value="professor"> Incluir nome na lista de pesquisadores de referência da REDE IDEA na sua instituição<br>
+              <input type="checkbox" name="opcao2" value="pesquisador"> Adicionar a IDE ou portal de geoinformação da sua instituição<br>
+              <input type="checkbox" name="opcao3" value="aluno-pos"> Excluir meu nome da lista<br>
+              <input type="checkbox" name="opcao4" value="aluno-grad"> Enviar um trabalho relacionado a temática <br>
+            </div> -->
+            <div>
+              <label for="msg">Sugestões ou comentários:</label>
+              <textarea id="msg"></textarea>
+            </div>
+            <div class="button">
+              <button type="submit">Pronto, enviar! :)</button>
+            </div>
+          </form>
+          <!-- <iframe width='700' height='800' align="middle" src="https://docs.google.com/forms/d/e/1FAIpQLSdQ64620pbG2d1CiVNnbNsoYJ26swdHvU8SOCROEsTsiUArUg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
         </div>
       </div>
     </div>
