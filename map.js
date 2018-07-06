@@ -81,16 +81,4 @@ window.onload = function() {
   }
 }).addTo(mapa);
 
-
-  // Adicionando os geojson ao mapa - BRASIL
-  // L.geoJSON(brasil, {
-  //   style: function (feicao) {
-  //     return {
-  //       color: "#7d7d7d",
-  //       weight: 1,
-  //       fill: false
-  //     }
-  //   }
-  // }).addTo(mapa);
-
 }

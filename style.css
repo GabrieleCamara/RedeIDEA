@@ -59,7 +59,7 @@ header li {
 /* Caixa do conteudo */
 .grid-index {
   width: 1000px;
-  height: 230%;
+  height: 180%;
   display: grid;
   position: absolute;
   left: 50%;
@@ -73,7 +73,7 @@ header li {
 
 .grid-mapa {
   width: 1000px;
-  height: 300%;
+  height: 180%;
   display: grid;
   position: absolute;
   left: 50%;
@@ -87,7 +87,7 @@ header li {
 
 .grid-public {
   width: 1000px;
-  height: 150%;
+  height: 120%;
   display: grid;
   position: absolute;
   left: 50%;
@@ -115,7 +115,7 @@ header li {
 
 .grid-inter {
   width: 1000px;
-  height: 230%;
+  height: 150%;
   display: grid;
   position: absolute;
   left: 50%;
