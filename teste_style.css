@@ -1,0 +1,11 @@
+/* Tamanho da página */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Tamanho do mapa */
+#mapa {
+  height: 100%;
+  width: 100%;
+}

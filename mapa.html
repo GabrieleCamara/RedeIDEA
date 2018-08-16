@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Rede IDEA - Mapa</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Link para biblioteca leaflet -->
+    <link type="text/css" rel="stylesheet" href="plugins/leaflet/leaflet.css"/>
+    <script src="plugins/leaflet/leaflet.js"></script>
+
+    <!-- Link para a biblioteca do minimap -->
+    <link type="text/css" rel="stylesheet" href="plugins/minimap/src/Control.MiniMap.css"/>
+    <script src="plugins/minimap/src/Control.MiniMap.js"></script>
+
+    <!-- Link para arquivos base -->
+    <link type="text/css" rel="stylesheet" href="style_map.css"/>
+    <script src="map.js"></script>
+
+    <!-- Adicionando as camadas de geojson -->
+    <script src="dados/ide.geojson"></script>
+    <script src="dados/portais.geojson"></script>
+    <script src="dados/brasil.geojson"></script>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1>MAPA DAS IDEA E PORTAIS DE GEOINFORMAÇÃO NO BRASIL</h1>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Sobre</a></li>
+							<li><a href="mapa.html">Mapa IDEAs</a></li>
+							<li><a href="publica.html">Publicações</a></li>
+							<li><a href="crie_idea.html">Crie uma IDEA</a></li>
+							<li>
+								<a href="#">Internacional</a>
+								<ul>
+									<li><a href="internacional.html#inter1">UCSB</a></li>
+									<li><a href="internacional.html#inter2">Digimap</a></li>
+									<li><a href="internacional.html#inter3">Scholars Geoportal</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title">O mapa</div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<iframe src="teste_mapa.html" width="100%" height="500"></iframe>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- Highlights -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">Participe da Rede</div>
+					<div class="container">
+						<div class="row aln-center">
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<!-- Contact Form -->
+										<section>
+											<form method="post" action="dados-formulario-ide.php">
+												<div class="row gtr-50">
+													<div class="col-6 col-12-small">
+														<input type="text" id="nome-univ" name="usuario_univer" placeholder="Nome da instituição de ensino" />
+													</div>
+													<div class="col-6 col-12-small">
+														<input type="text" id="link-ide" name="usuario_idea" placeholder="Link da IDEA ou geoportal" />
+													</div>
+													<div class="col-6 col-12-small">
+														<input type="text" id="nome" name="usuario_nome" placeholder="Nome" />
+													</div>
+													<div class="col-6 col-12-small">
+														<input type="text" id="email" name="usuario_email" placeholder="Email" />
+													</div>
+													<div class="col-12">
+														<textarea id="msg" name="msg" placeholder="Mensagem" rows="4"></textarea>
+													</div>
+													<div class="col-12">
+														<ul class="actions">
+															<li><input type="submit" class="style1" value="Pronto, enviar!" /></li>
+															<li><input type="reset" class="style2" value="Apagar dados" /></li>
+														</ul>
+													</div>
+												</div>
+											</form>
+										</section>
+								</div>
+								<div class="col-6 col-12-medium">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer" class="wrapper">
+				<div class="title">Colaboradores</div>
+				<div class="container">
+						<div class="col-6 col-12-medium">
+							<!-- Contact -->
+								<section class="feature-list small">
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon fa-envelope">redeidea@gmail.com</h3>
+												<!-- <img src="Imagem1.png" width="70px" height="70px" alt=""/> -->
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<img src="images/ica_logo.png" width="70px" height="70px" alt=""/>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<img src="images/geoforall.png" width="70px" height="70px" alt=""/>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<img src="images/logo_ufpr.png" width="90px" height="70px" alt=""/>
+											</section>
+										</div>
+									</div>
+								</section>
+
+						</div>
+					</div>
+					<div id="copyright">
+						<ul>
+							<li>&copy; LabGeoLivre - UFPR</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,6 +1,6 @@
 window.onload = function() {
   // Variável do Mapa
-  var mapa = L.map("mapa", {
+  var mapa = L.map('mapa', {
     center: [-15.15, -54.95],
     zoom: 4
   });
@@ -19,20 +19,6 @@ window.onload = function() {
 
   // MiniMap
   var miniMap = new L.Control.MiniMap(OMS_Grayscale).addTo(mapa);
-
-  // Adicionando os wms ao mapa - IDE
-  // L.tileLayer.wms('http://webserver.geomatica.ufpr.br/geoserver/wms',
-  // {layers: 'geonode:ide',
-  // transparent: 'true',
-  // format: 'image/png'
-  // }).addTo(mapa);
-
-  // Adicionando os wms ao mapa - PORTAIS
-//   L.tileLayer.wms('http://webserver.geomatica.ufpr.br/geoserver/wms',
-//   {layers: 'geonode:portais',
-//   transparent: 'true',
-//   format: 'image/png'
-// }).addTo(mapa);
 
 // Simbologia dos pontos em geoJSON
 // Criando a classe dos símbolos personalizados
