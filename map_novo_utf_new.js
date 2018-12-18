@@ -1,4 +1,4 @@
-window.onload = function() {
+﻿window.onload = function() {
   // Variável do Mapa
   var mapa = L.map('mapa', {
     center: [-15.15, -54.95],
@@ -7,7 +7,8 @@ window.onload = function() {
 
   // Base cartográfica adicionada ao mapa
   var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	maxZoom: 18,
+	minZoom: 4,
+	maxZoom: 13,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mapa);
 
@@ -23,8 +24,8 @@ window.onload = function() {
 // Simbologia dos pontos em geoJSON
 // Simbologia circulo para os pontos da camada IDE
 var circleToIDE = {
-    radius: 4,
-    fillColor: "#ff7800",
+    radius: 5,
+    fillColor: "#008080",
     color: "#000",
     weight: 0.4,
     opacity: 1,
@@ -33,8 +34,8 @@ var circleToIDE = {
 
 // Simbologia circulo para os pontos da camada portais
 var circleToPortais = {
-    radius: 4,
-    fillColor: "#009933",
+    radius: 5,
+    fillColor: "#ff8247",
     color: "#000",
     weight: 0.4,
     opacity: 1,
@@ -42,22 +43,22 @@ var circleToPortais = {
 };
 
 // Adicionando os geojson ao mapa - IDE
-  L.geoJSON(ide, {
+  L.geoJSON(part, {
   pointToLayer: function (feicao, posicao) {
     return L.circleMarker(posicao, circleToIDE);
   },
   onEachFeature: function (feicao, camada) {
-    camada.bindPopup(feicao.properties.nome + " (" + feicao.properties.sigla + ")" + "</br><b>Link IDE:</b> " + feicao.properties.link_ide);
+    camada.bindPopup(feicao.properties.nome + " (" + feicao.properties.sigla + ")" + "</br><b>Link IDE:</b> " + feicao.properties.link);
   }
 }).addTo(mapa);
 
 // Adicionando os geojson ao mapa - PORTAIS
-  L.geoJSON(portais, {
+  L.geoJSON(n_part, {
   pointToLayer: function (feicao, posicao) {
     return L.circleMarker(posicao, circleToPortais);
   },
   onEachFeature: function (feicao, camada) {
-      camada.bindPopup(feicao.properties.nome + " (" + feicao.properties.sigla + ")"+ "<br/><b>Link Portal: </b> " + feicao.properties.link_ide);
+      camada.bindPopup(feicao.properties.nome + " (" + feicao.properties.sigla + ")"+ "<br/><b>Link Portal: </b> " + feicao.properties.link);
   }
 }).addTo(mapa);
 

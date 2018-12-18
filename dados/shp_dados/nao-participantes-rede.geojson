@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4674" } },
+"features": [
+{ "type": "Feature", "properties": { "address": "Avenida Itália, Rio Grande, Microrregião do Litoral Lagunar, Aglomeração Urbana do Sul, Mesorregião Sudeste Rio-Grandense, RS, Região Sul, Brasil", "nome": "Universidade Federal do Rio Grande", "sigla": "FURG", "link": "http:\/\/gercoserv.furg.br\/site\/" }, "geometry": { "type": "Point", "coordinates": [ -52.1465547, -32.0606101 ] } },
+{ "type": "Feature", "properties": { "address": "UFSC, Avenida César Seara, Pantanal, Florianópolis, Microrregião de Florianópolis, Mesorregião da Grande Florianópolis, SC, Região Sul, 88040-901, Brasil", "nome": "Universidade Federal de Santa Catarina", "sigla": "UFSC", "link": "https:\/\/www.labtrans.ufsc.br\/" }, "geometry": { "type": "Point", "coordinates": [ -48.522463395667408, -27.6033738 ] } },
+{ "type": "Feature", "properties": { "address": "Universidade Estadual do Centro-Oeste, 875, Rua Salvatore Renna, Guarapuava, Microrregião de Guarapuava, Mesorregião Centro Sul Paranaense, PR, Região Sul, 85015-430, Brasil", "nome": "Universidade Estadual do Centro-Oeste", "sigla": "UNICENTRO", "link": "http:\/\/geo.paulopieczarka.com\/index.php" }, "geometry": { "type": "Point", "coordinates": [ -51.470338272801001, -25.40690765 ] } },
+{ "type": "Feature", "properties": { "address": "Universidade Federal de Goiás, Avenida Bom Pastor, Goiás, Microrregião de Rio Vermelho, Mesorregião Noroeste Goiano, GO, Região Centro-Oeste, Brasil", "nome": "Universidade Federal de Goiás", "sigla": "UFG", "link": "http:\/\/maps.lapig.iesa.ufg.br\/lapig.html" }, "geometry": { "type": "Point", "coordinates": [ -50.135255570615399, -15.94132585 ] } },
+{ "type": "Feature", "properties": { "address": "Universidade Federal da Paraíba\/CAVN, Acesso UFPB, Bananeiras, Microrregião do Brejo Paraibano, Mesorregião do Agreste Paraibano, PB, Região Nordeste, 58220-000, Brasil", "nome": "Universidade Federal da Paraíba", "sigla": "UFPB", "link": "http:\/\/www.geociencias.ufpb.br\/leppan\/mapoteca\/" }, "geometry": { "type": "Point", "coordinates": [ -35.645450217619697, -6.7505593 ] } }
+]
+}
